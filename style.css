@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Days One', sans-serif;
+}
+
+section{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('img/texturewine.jpg');
+    background-size: 100%;
+}
+
+button{
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    background-color:rgba(182, 23, 23, 0.548);
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover{
+    background-color:rgba(0, 0, 0, 0.808);
+}
+
+button.showModal, 
+.modalBox {
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalBox{
+    position:absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    background-color: rgba(206, 9, 9, 0.719);
+    border-radius: 10px;
+    color: rgb(56, 49, 49);
+    padding: 22px 20px;
+    opacity:0;
+    pointer-events: none;  
+    
+}
+
+section.active .showModal{
+    display:none;
+}
+
+section.active .overlay{
+     opacity:1;
+     pointer-events: auto;
+}
+
+section.active .modalBox{
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.modalBox i {
+    font-size: 70px;
+    color: #ffff;
+}
+.modalBox h2{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight:700;
+    font-family: 'Days One', sans-serif;
+}
+.modalBox h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Vollkorn SC', serif;
+    font-weight:bold;
+}
+
+.modalBox button{
+    padding: 14px 40px;
+    font-size: 14px;
+    margin: 0px 20px;
+}
+
+.modalBox .buttons{
+    margin-top: 20px;
+}
